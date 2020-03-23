@@ -14,12 +14,12 @@ class CreateToursTable extends Migration
     public function up()
     {
         Schema::create('tours', function (Blueprint $table) {
-          $table->bigIncrements('id');
-          $table->text('tour');
-          $table->text('content');
-          $table->double('price');
-          $table->text('photo');
-          $table->timestamps();
+            $table->bigIncrements('id');
+            $table->text('tour');
+            $table->text('content');
+            $table->double('price');
+            $table->text('photo');
+            $table->timestamps();
         });
     }
 
