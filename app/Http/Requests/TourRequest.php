@@ -24,19 +24,19 @@ class TourRequest extends FormRequest
    */
   public function rules()
   {
-    return [
-      'tour'=>'required',
-      'content'=>'required',
-      'price'=>'required',
-      'image'=>'required',
-    ];
+      return [
+          'tour'=>'required',
+          'content'=>'required',
+          'price'=>'required',
+          'image'=>'required',
+      ];
   }
   public function messages(){
-    return ([
-      'tour.required'=>'Поле назва туру є обов`язковим',
-      'content.required'=>'Поле опис туру є обов`язковим',
-      'price.required'=>'Поле ціни є обов`язковим',
-      'image.required'=>'Поле Photo туру є обов`язковим'
-    ]);
+      return ([
+          'tour.required'=>'Поле назва туру є обов`язковим',
+          'content.required'=>'Поле опис туру є обов`язковим',
+          'price.required'=>'Поле ціни є обов`язковим',
+          'image.required'=>'Поле Photo туру є обов`язковим'
+      ]);
   }
 }
