@@ -30,27 +30,24 @@ Route::group(['middleware' => 'auth', 'middleware' => 'access:admin'], function 
   Route::get('admin/tour/{tour}/edit', 'Admin\AdminTourController@edit')->name('edit-tour');
   Route::get('admin/tour/{tour}/delete', 'Admin\AdminTourController@delete')->name('delete_tour');
   Route::post('admin/tour/{tour}/update', 'Admin\AdminTourController@update_tour')->name('update_tour');
+    
+  Route::get('/maps/{id}','MarkerController@show')->name('show');
+    
+  Route::get('/tour/{id}','TourController@show')->name('tourshow');
+  Auth::routes();
+  
+  Route::post('/comments/{id}','CommentController@marker_comment_store')->name('markercomment');
+  Route::post('/comments_tour/{id}', 'CommentController@tour_comment_store')->name('tour-comments');
+
+  Route::get('/tour/comment/delete/{id}', 'CommentController@comment_delete');
+  Route::get('/tour/comment/edit/{id}', 'CommentController@comment_edit');
+    
 });
 Route::get('/','MarkerController@indexuser');
-Route::get('/maps/{id}','MarkerController@show')->name('show');
-
-Route::get('/tour/{id}/like', 'LikeDislikeController@create_like');
-Route::get('/tour/{id}/dislike', 'LikeDislikeController@create_dislike');
 
 Route::get('/tour','TourController@index');
-Route::get('/tour/{id}','TourController@show')->name('tourshow');
-Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
-//Додавання кометарів користувацької частини
-Route::post('/comments/{id}','CommentController@marker_comment_store')->name('markercomment');
-Route::post('/comments_tour/{id}', 'CommentController@tour_comment_store')->name('tour-comments');
-
-
-Route::get('/like/{id}','LikeController@like')->name('like');
-Route::get('/dislike/{id}','DislikeController@dislike')->name('dislike');
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
