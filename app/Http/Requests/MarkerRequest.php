@@ -34,10 +34,10 @@ class MarkerRequest extends FormRequest
     }
     public function messages(){
         return([
-          'title.required'=>'Поле заголовок є обов`язковим!',
-          'content.required'=>'Поле додаткової інформації є обов`язковим!',
-          'image.required'=>'Поле photo є обов`язковим!',
-          'latlng.required'=>'Поле lat є обов`язковим!',
+            'title.required'=>'Поле заголовок є обов`язковим!',
+            'content.required'=>'Поле додаткової інформації є обов`язковим!',
+            'image.required'=>'Поле photo є обов`язковим!',
+            'latlng.required'=>'Поле lat є обов`язковим!',
           
         ]);
     }
