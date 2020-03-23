@@ -14,7 +14,7 @@
     <h5 style="text-align:justify;">{{$marker->content}}</h5>
 
    
-    @foreach($marker->comments as $comment)
+    @foreach ( $marker->comments as $comment )
         <div style="border:white solid 1px;border-radius:7px;" class="">
           <div id="app"class="" style="background:white;
           padding:10px;margin: 5px;
@@ -31,7 +31,7 @@
           </div>
         </div>
     @endforeach
-        <form action = "{{route('markercomment',$marker->id)}}" method = "POST">
+        <form action = "{{route('markercomment', $marker->id)}}" method = "POST">
           {{csrf_field()}}
            <div style="position:relative;;" class="form-group">
             <br />
