@@ -18,7 +18,7 @@
         {{session('success')}}
       </div>
     @endif
-    @foreach($markers as $marker)
+    @foreach ( $markers as $marker )
 
       <div class="tur-menu">
         <a href="/marker/{{$marker->id}}">
@@ -28,7 +28,7 @@
         <h6> Lat: {{$marker->lat}} </h6>
         <h6>Lng: {{$marker->lng}} </h6>
 
-        <a href="{{route('edit-marker',$marker->id)}}"><button style="float: left;"  type="button"    class="btn btn-primary" name="button">Редагувати</button></a>
+        <a href="{{route('edit-marker', $marker->id)}}"><button style="float: left;"  type="button"    class="btn btn-primary" name="button">Редагувати</button></a>
       <a href="{{route('delete', $marker->id)}}">  <button style="float:right;" type="submit" class="btn btn-danger" name="button"> Видалити</button></a>
 
 
