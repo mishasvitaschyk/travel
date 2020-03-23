@@ -25,15 +25,14 @@ class CommentRequest extends FormRequest
     public function rules()
     {
         return [
-
             'comment'=>'required|min:2'
         ];
     }
     public function messages(){
-      return ([
-        'user.required'=>'Для додавання коментаря, будь ласка, увійдіть в систему!',
-        'comment.required'=>'Введіть будь ласка коментар!',
-        'comment.min'=>'Мінімальна калькість символів 2!'
-      ]);
+        return ([
+            'user.required'=>'Для додавання коментаря, будь ласка, увійдіть в систему!',
+            'comment.required'=>'Введіть будь ласка коментар!',
+            'comment.min'=>'Мінімальна калькість символів 2!'
+        ]);
     }
 }
