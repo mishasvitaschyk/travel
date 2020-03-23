@@ -8,10 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Tour extends Model
 {
-  public function comments()
-  {
-      return $this->morphMany('App\Comment', 'commentable');
-  }
+    public function comments()
+    {
+        return $this->morphMany('App\Comment', 'commentable');
+    }
 
   /*public function likes()
   {
