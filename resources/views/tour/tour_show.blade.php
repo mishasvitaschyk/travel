@@ -27,6 +27,11 @@
           <div id="app"class="" style="background:white;
             padding:10px;margin: 5px;
             border-radius:7px;" class="">
+            <? if($comment->user_id == Auth::user()->id )
+            {
+              echo "<a href='/tour/comment/delete/$comment->id'><i style='float:right;' class='glyphicon glyphicon-remove'> </i></a>";
+              echo "<a href='/tour/comment/edit/$comment->id'><i style='float:right; margin-right:4px;' class='glyphicon glyphicon-pencil'> </i></a>";
+            }?>
             <h5 style="text-align:left;"><i class="glyphicon glyphicon-user"> </i> <b>{{$comment->user}}</b></h5>
             <h5 style="text-align:left;">{{$comment->comment}}</h5>
             <h6 style="float:left;margin-left: 5px;margin-top:-10px;"><i style="color: #317AAF;" class="glyphicon glyphicon-heart"> 0</i></h6> <h6 style="float:right;margin-top:-10px;">{{$comment->created_at}}</h6>
