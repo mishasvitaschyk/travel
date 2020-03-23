@@ -13,10 +13,10 @@ class Tour extends Model
       return $this->morphMany('App\Comment', 'commentable');
   }
 
-  public function likes()
+  /*public function likes()
   {
      return $this->hasMany('App\LikeDislike', 'assessment_id');
-  }
+  }*/
 
     protected $fillable = ['id','tour','content', 'price', 'photo'];
 }
