@@ -20,7 +20,7 @@
           <div id="app"class="" style="background:white;
             padding:10px;margin: 5px;
             border-radius:7px;" class="">
-            <? if($comment->user_id == Auth::user()->id )
+            <? if ( $comment->user_id == Auth::user()->id )
             {
               echo "<a href='/tour/comment/delete/$comment->id'><i style='float:right;' class='glyphicon glyphicon-remove'> </i></a>";
               echo "<a href='/tour/comment/edit/$comment->id'><i style='float:right; margin-right:4px;' class='glyphicon glyphicon-pencil'> </i></a>";
