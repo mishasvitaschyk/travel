@@ -14,12 +14,12 @@ class CreateMarkersTable extends Migration
     public function up()
     {
         Schema::create('markers', function (Blueprint $table) {
-          $table->bigIncrements('id');
-          $table->text('title');
-          $table->text('content');
-          $table->text('latlng');
-          $table->text('image');
-          $table->timestamps();
+            $table->bigIncrements('id');
+            $table->text('title');
+            $table->text('content');
+            $table->text('latlng');
+            $table->text('image');
+            $table->timestamps();
         });
 
     }
