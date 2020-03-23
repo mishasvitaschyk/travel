@@ -14,7 +14,7 @@
         center: {lat: 50.431782, lng: 30.516382}
       };
       var myMap = new google.maps.Map(element,options);
-     @foreach($markers as $marker)
+     @foreach ( $markers as $marker )
       var marker = new google.maps.Marker({
         position: boudha,
         map: myMap
