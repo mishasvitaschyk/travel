@@ -8,13 +8,12 @@
 @section('content')
 <div  style="text-align: center;" class="container">
   <div class="col-sm-2">
-
   </div>
   <div class="jumbotron col-sm-8">
     <p style="text-align:center;"><img width="90%"src="{{asset('/storage/'. $marker->image)}}" alt=""></p>
     <h4>{{$marker->title}}</h4>
     <h5 style="text-align:justify;">{{$marker->content}}</h5>
-    @foreach($marker->comments as $comment)
+    @foreach ($marker->comments as $comment)
         <div style="border:white solid 1px;border-radius:7px;" class="">
           <div id="app"class="" style="background:white;
           padding:10px;margin: 5px;
@@ -29,22 +28,14 @@
           {{csrf_field()}}
            <div style="position:relative;;" class="form-group">
             <br />
-
             @include('errors.errors')
              <textarea name="comment"  class="form-control" rows="1" placeholder="Коментувати" cols="1"></textarea><button style="" class="btn"type="submit" name="button"><img style="float:right;margin-top: -53px;margin-right: -100px;border:white solid 1px;" height="10%" width="7%"  src="https://image.flaticon.com/icons/png/512/2390/2390175.png" alt=""></button>
-
            </br><br />
-
-
-
            </div>
-
         </form>
         <div class="card">
           <div class="card-blok">
-
           </div>
-
         </div>
   </div>
 </div>
