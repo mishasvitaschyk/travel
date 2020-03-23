@@ -14,15 +14,8 @@
       <h5 style="text-align:justify;">{{$tour->content}}</h5>
       <h6> Ціна: {{$tour->price}} $</h6>
       <h6>Контакти: +(380)2856458</h6>
-
-
-      <a href="/tour/{{$tour->id}}/like">Like</a>
-        {{$tour->likes()->count()}}
-
-      <a href="/tour/{{$tour->id}}/dislike">Disike</a>
       <h3>Коментарів : {{$tour->comments()->count()}}</h3>
       @foreach($tour->comments as $comment)
-
         <div style="border:white solid 1px;border-radius:7px;" class="">
           <div id="app"class="" style="background:white;
             padding:10px;margin: 5px;
