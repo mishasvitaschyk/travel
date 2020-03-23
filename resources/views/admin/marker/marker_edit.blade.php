@@ -7,14 +7,11 @@
 <br />
 <div   class="container">
   <div class="col-sm-2">
-
-      </div>
+  </div>
   <div class="jumbotron col-sm-8">
     @include('errors.errors')
-
     <form action = "{{route('update-marker', $marker->id)}}" enctype="multipart/form-data" method = "POST">
       {{csrf_field()}}
-
       <div style="position:relative;;" class="form-group">
         <label for="">Заголовок</label><br />
         <input type='text' class="form-control" size="30%" value="{{$marker->title}}" placeholder="" name='title' /><br />
@@ -28,7 +25,6 @@
           <button type="button" class="btn btn-success" data-toggle="modal" data-target="#maps" name="button">Вибрати координати</button>
           <div id="min"></div>
           <label for="">LatLng:</label><br />
-
           <input type="text" class="form-control"  size="30%" id="marker" value="{{$marker->latlng}}" name="latlng"/><br />
           <div id="maps"class="modal fade">
             <div class="modal-dialog modal-lg">
@@ -37,53 +33,36 @@
                   <div class=""id="map">
                       <script>
                       function initMap() {
-
                         var map = new google.maps.Map(document.getElementById('map'), {
                             zoom: 7,
                             center: {lat: 50.431782, lng: 30.516382}
                           });
-
                           map.addListener('click', function(e) {
                             placeMarkerAndPanTo(e.latLng, map);
-
                           });
                         }
-
                         function placeMarkerAndPanTo(latLng, map) {
                           var marker = new google.maps.Marker({
                             position: latLng,
                             map: map
-
                           });
                           var min = latLng;
-
                           document.getElementById('marker').value = min;
                           map.panTo(latLng);
                        }
                       </script>
-
                     </div>
-
-
-
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-danger" data-dismiss="modal"name="button">Додати</button>
                 </div>
-
               </div>
-
             </div>
-
           </div>
         </div>
         <input class="btn btn-primary"type = 'submit' value = "Оновити"/>
       </div>
-
     </form>
-
   </div>
 </div>
-
-
 @endsection
