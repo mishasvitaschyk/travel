@@ -39,8 +39,8 @@ class AdminMarkerController extends Controller
 
     public function show($id)
     {
-      $marker = App\Marker::find($id);
-      return view('admin.marker.marker_show', compact('marker'));
+        $marker = App\Marker::find($id);
+        return view('admin.marker.marker_show', compact('marker'));
     }
 
     public function edit_marker($id)
@@ -63,9 +63,9 @@ class AdminMarkerController extends Controller
 
       public function delete($id)
       {
-         $namephoto = App\Marker::find($id)->value('image');
-         Storage::delete($namephoto);
-         Marker::find($id)->delete();
-         return back();
+           $namephoto = App\Marker::find($id)->value('image');
+           Storage::delete($namephoto);
+           Marker::find($id)->delete();
+           return back();
       }
 }
