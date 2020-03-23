@@ -14,7 +14,7 @@
     <h5 style="text-align:justify;">{{$marker->content}}</h5>
 
    
-    @foreach ( $marker->comments as $comment )
+    @foreach ($marker->comments as $comment)
         <div style="border:white solid 1px;border-radius:7px;" class="">
           <div id="app"class="" style="background:white;
           padding:10px;margin: 5px;
