@@ -36,4 +36,15 @@ class CommentController extends Controller
     ]);
   return back();
   }
+    
+  public function comment_delete($id)
+  {
+    Comment::find($id)->delete();
+    return back();
+  }
+  
+  public function comment_edit($id)
+  {
+    return back();
+  }
 }
