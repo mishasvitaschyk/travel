@@ -15,8 +15,8 @@ class AdminMarkerController extends Controller
 {
     public function index()
     {
-    $markers = App\Marker::paginate(12);
-    return view('admin.marker.marker', compact('markers'));
+        $markers = App\Marker::paginate(12);
+        return view('admin.marker.marker', compact('markers'));
     }
 
     public function create()
@@ -53,9 +53,9 @@ class AdminMarkerController extends Controller
     {
         Marker::find($id)->update([
             'title'=>request('title'),
-             'content'=> request('content'),
-             'latlng'=> request('latlng'),
-             'image'=> request('image')
+            'content'=> request('content'),
+            'latlng'=> request('latlng'),
+            'image'=> request('image')
         ]);
 
         return redirect('/admin')->with('success','Дані було оновлено');
